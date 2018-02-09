@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,300,600,400italic' type="text/css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <!-- Form Holder -->
+    <div class="container">
+        <div class="login-body">
+            <i class="fa fa-times close"></i>
+
+            <!--Character-->
+            <div class="character">
+                <h2 class="h2one">Sign in Using</h2>
+                <h2>Signup Using</h2>
+            </div>
+            <!--Character-->
+
+            <!--Social icons-->
+            <div class="social">
+                <a href="#" class="fb"></a>
+                <a href="#" class="twt"></a>
+
+            </div>
+            <!--Social icons-->
+
+            <!-- Sign in Form -->
+            <div class="sign-in-holder">
+                <form>
+                    <span class="mail-icon"></span>
+                    <input type="email" placeholder="E-mail" required>
+                    <!---->
+                    <span class="password-icon"></span>
+                    <input type="password" placeholder="Password" required>
+                    <h2 class="forget">Forget Password ?</h2>
+                    <input type="submit" value="Login" class="signin">
+                </form>
+                <button class="signup-buttongo">Sign up</button>
+            </div>
+
+            <!-- End Sign in Form -->
+
+            <!-- Sign Up Form -->
+            <div class="sign-up-holder">
+                <form>
+                    <span class="mail-icon">
+                    </span>
+                    <!--<input type="text" placeholder="name" required>-->
+                    <input type="email" placeholder="E-mail" required>
+                    <!---->
+                    <span class="password-icon"></span>
+                    <input type="password" class="" placeholder="Password" required>
+                    <span class="password-icon2"></span>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <div class="show-icon"><i class="fa fa-eye"></i></div>
+                    <input type="submit" value="Sign up" class="signupdo">
+
+               </form>
+                <button class="back-button">Back</button> 
+            </div>
+            <!-- End Sign Up Form -->
+
+        </div>
+    </div>
+    <!-- Form Holder -->
+
+</body>Signup Using
+
+<style>
+    /*30 Days UI Challange By : Marwan Medhat*/
+    /*Day 4 (Login Form) Pure CSS + HTML+ JQ for Ahmed and R.I.P Eva :( */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ff9b39;
+        overflow: hidden;
+    }
+    
+    .container {
+        width: 1000px;
+        overflow: hidden;
+        margin: auto;
+    }
+    /*/-- Login Body --/*/
+    
+    .login-body {
+        position: fixed;
+        margin: 5px 0 0 332px;
+        width: 353px;
+        height: 487px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0px 13px 33px -10px rgba(0, 0, 0, 0.20);
+        z-index: 1;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .login-body:hover {
+        margin-top: 15px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .login-body .close {
+        font-size: 18px;
+        color: #FF9B39;
+        width: 15px;
+        height: 5px;
+        border-radius: 15px;
+        right: 14px;
+        top: 9px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    /*/-- Charactar --/*/
+    
+    .login-body .character {
+        position: absolute;
+        width: 382px;
+        height: 200px;
+        top: -12px;
+        right: 9px;
+        background: url(http://imarwan.com/els/css/images/Charcter.png) no-repeat;
+    }
+    
+    .character h2 {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 192px;
+        left: 152px;
+        font: 300 23px Open Sans;
+        color: #f58212;
+    }
+    
+    .character h2:last-child {
+        display: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 192px;
+        left: 152px;
+        font: 300 23px Open Sans;
+        color: #f58212;
+    }
+    /*/-- Charactar End --/*/
+
+    /*/-- Social icons  --/*/
+    
+    .login-body .social {
+        position: absolute;
+        width: 100px;
+        top: 212px;
+        left: 212px;
+    }
+    
+    .login-body .social .fb {
+        position: absolute;
+        background: url(http://imarwan.com/els/css/images/fb-twt.gif);
+        width: 100px;
+        height: 85px;
+        top: -15px;
+        right: 111px;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    
+    .fb:hover {
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    
+    .login-body .social .twt {
+        position: absolute;
+        background: url(http://imarwan.com/els/css/images/fb-twt.gif) 12px -106px;
+        width: 100px;
+        height: 48px;
+        top: 9px;
+        right: 65px;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    
+    .twt:hover {
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    
+    .social h2 {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 64px;
+        left: -48px;
+        font: 300 20px Open Sans;
+        color: #f58212;
+        ;
+    }
+    /*/-- Social icons End  --/*/
+
+    /*Form*/
+    
+    form {
+        position: absolute;
+        top: 263px;
+        left: 81px;
+        width: 219px;
+    }
+    
+    .mail-icon {
+        position: absolute;
+        height: 63px;
+        width: 66px;
+        background: url(http://imarwan.com/els/css/images/fb-twt.gif) 0 -157px;
+        left: -56px;
+        top: -5px;
+        -webkit-transform: scale(0.69);
+        transform: scale(0.69);
+    }
+    
+    input[type=email] {
+        color: #f58212;
+        font: 600 14px Open Sans;
+        width: 219px;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1.8px solid #ff9b39;
+        margin: 19px 0 0 -3px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    
+    input:invalid {
+        box-shadow: 0 0 0 0;
+    }
+    
+    ::-webkit-input-placeholder {
+        /* For Chrome :( */
+        color: #fe9024;
+        opacity: 0.7;
+    }
+    
+    *:focus {
+        outline: none;
+    }
+    
+    input[type=email]:hover {
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        width: 235px;
+        opacity: 0.9;
+    }
+    
+    .password-icon {
+        position: absolute;
+        height: 63px;
+        width: 66px;
+        background: url(http://imarwan.com/els/css/images/fb-twt.gif) 0 -212px;
+        left: -56px;
+        top: 44px;
+        -webkit-transform: scale(0.69);
+        transform: scale(0.69);
+    }
+    
+    .password-icon2 {
+        position: absolute;
+        height: 63px;
+        width: 66px;
+        background: url(images/fb-twt.gif) 0 -212px;
+        left: -56px;
+        top: 90px;
+        -webkit-transform: scale(0.69);
+        transform: scale(0.69);
+    }
+    
+    input[type=password] {
+        color: #f58212;
+        font: 600 14px Open Sans;
+        width: 219px;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1.8px solid #ff9b39;
+        margin: 25px 0 0 -3px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    
+    input[type=text] {
+        color: #f58212;
+        font: 600 14px Open Sans;
+        width: 219px;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1.8px solid #ff9b39;
+        margin: 25px 0 0 -3px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    
+    input[type=password]:hover {
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        width: 235px;
+        opacity: 0.9;
+    }
+    
+    .forget {
+        position: absolute;
+        color: #f58212;
+        font: italic 13.5px Open Sans;
+        top: 86px;
+        right: 3px;
+        cursor: pointer;
+    }
+    
+    .show-icon {
+        color: #FF9C36;
+        cursor: pointer;
+        position: absolute;
+        top: 68px;
+        right: 5px;
+        opacity: 0.6;
+    }
+    
+    .show-icon:hover {
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        opacity: 1;
+    }
+    
+    .signup-buttongo {
+        position: absolute;
+        width: 119px;
+        height: 38px;
+        bottom: 42px;
+        left: 61px;
+        font: 600 13px Open Sans;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        color: #FFFFFF;
+        background-color: #FF9B39;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signup-buttongo:hover {
+        bottom: 47px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signup-button {
+        position: absolute;
+        width: 119px;
+        height: 38px;
+        bottom: 42px;
+        left: 61px;
+        font: 600 13px Open Sans;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        color: #FFFFFF;
+        background-color: #FF9B39;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signup-button:hover {
+        bottom: 47px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signin {
+        position: absolute;
+        width: 119px;
+        height: 38px;
+        bottom: -43px;
+        top: 145px;
+        left: 104px;
+        font: 600 13px Open Sans;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        color: #FFFFFF;
+        background-color: #FF9B39;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signin:hover {
+        top: 140px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .back-button {
+        position: absolute;
+        width: 119px;
+        height: 38px;
+        bottom: 26px;
+        left: 61px;
+        font: 600 13px Open Sans;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        color: #FFFFFF;
+        background-color: #FF9B39;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .back-button:hover {
+        bottom: 29px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signupdo {
+        position: absolute;
+        width: 119px;
+        height: 38px;
+        bottom: -61px;
+        left: 107px;
+        font: 600 13px Open Sans;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        color: #FFFFFF;
+        background-color: #FF9B39;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .signupdo:hover {
+        bottom: -55px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    /* sign-up-holder */
+    
+    .sign-up-holder {
+        display: none;
+    }
+    /* sign-up-holder */
+
+    /*/-- Login Body End --/*/</style><script>
+    $(document).ready(function () {
+
+    //Signup-Toggle//
+
+    $(".signup-buttongo").click(function () {
+        $(".sign-in-holder").fadeToggle(200);
+        $(".sign-up-holder").fadeToggle(200);
+        $(".character .h2one").fadeToggle(300);
+        $(".character h2:last-child").fadeToggle(200);
+    });
+
+    $(".back-button").click(function () {
+        $(".sign-in-holder").fadeToggle(200);
+        $(".sign-up-holder").fadeToggle(200);
+        $(".character .h2one").fadeToggle(200);
+        $(".character h2:last-child").fadeToggle(200);
+    });
+
+    // Simple Show password //
+    $(".show-icon").click(function () {
+        $('.sign-up-holder').find('input:password').prop({
+            type: "text"
+        });
+
+    });
+
+});</script>
